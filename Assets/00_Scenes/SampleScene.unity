@@ -966,7 +966,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &623080830
 Rigidbody2D:
   serializedVersion: 5
@@ -1929,6 +1929,51 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &889532725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 889532726}
+  - component: {fileID: 889532727}
+  m_Layer: 0
+  m_Name: PlatformSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &889532726
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889532725}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &889532727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889532725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a5d98570866104cac31b2c6ba7547a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platperfab: {fileID: 619582412849582271, guid: 9b68b214b850946478e30ea9eb0efc12, type: 3}
 --- !u!1 &897629673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2870,37 +2915,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1960874326 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 619582412849582271, guid: 9b68b214b850946478e30ea9eb0efc12, type: 3}
-  m_PrefabInstance: {fileID: 8674736495110183826}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1960874330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960874326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00e6a496ee84594428b7933d590a890e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstacles: []
---- !u!114 &1960874331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960874326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0de16efec2d66b54bac76de5ccf791a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
 --- !u!1 &2010433924
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,6 +3185,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform
       objectReference: {fileID: 0}
+    - target: {fileID: 619582412849582271, guid: 9b68b214b850946478e30ea9eb0efc12, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1450696550026855822, guid: 9b68b214b850946478e30ea9eb0efc12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3214,13 +3232,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 619582412849582271, guid: 9b68b214b850946478e30ea9eb0efc12, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1960874331}
-    - targetCorrespondingSourceObject: {fileID: 619582412849582271, guid: 9b68b214b850946478e30ea9eb0efc12, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1960874330}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b68b214b850946478e30ea9eb0efc12, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -3238,3 +3250,4 @@ SceneRoots:
   - {fileID: 1087970692}
   - {fileID: 1117868416}
   - {fileID: 8674736495110183826}
+  - {fileID: 889532726}
