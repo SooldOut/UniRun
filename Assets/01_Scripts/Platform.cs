@@ -9,6 +9,7 @@ public class Platform : MonoBehaviour
 
     private void OnEnable()
     {
+        count = 0;
         stepped = false;
 
         for (int i = 0; i < obstacles.Length; i++)
